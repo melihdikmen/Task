@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/processListFragment">
+
+    <fragment
+        android:id="@+id/processListFragment"
+        android:name="com.example.task.pages.process_list.ProcessListFragment"
+        android:label="fragment_process_list"
+        tools:layout="@layout/fragment_process_list" >
+        <action
+            android:id="@+id/action_processListFragment_to_processDetailFragment"
+            app:destination="@id/processDetailFragment" />
+        <action
+            android:id="@+id/action_processListFragment_to_addPhotoFragment"
+            app:destination="@id/addPhotoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/processDetailFragment"
+        android:name="com.example.task.pages.process_detail.ProcessDetailFragment"
+        android:label="fragment_process_detail"
+        tools:layout="@layout/fragment_process_detail" />
+    <fragment
+        android:id="@+id/addPhotoFragment"
+        android:name="com.example.task.pages.add_photo.AddPhotoFragment"
+        android:label="fragment_add_photo2"
+        tools:layout="@layout/fragment_add_photo2" />
+</navigation>
